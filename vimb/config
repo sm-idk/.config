@@ -4,7 +4,7 @@ set home-page=https://sm-idk.me/
 # Path to the default download directory. If no download directory is set,
 # download will be written into current directory. The following pattern will
 # be expanded if the download is started '~/', '~user', '$VAR' and '${VAR}'.
-set download-path=~/Downloads
+set download-path='~/Downloads'
 
 # Command with placeholder '%s' called if form field is opened with $EDITOR to
 # spawn the editor-like `x-terminal-emulator -e vim %s'. To use Gvim as the
@@ -60,7 +60,6 @@ shortcut-add w=https://farside.link/wikiless
 shortcut-add wiki=https://en.wikipedia.org/w/index.php?search=$0
 shortcut-add go=https://encrypted.google.com/search?q=$0
 shortcut-add who=https://farside.link/whoogle
-
 ## MEDIA STREAMING
 shortcut-add i=https://farside.link/invidious
 shortcut-add e=https://ev01.to/
@@ -80,6 +79,7 @@ shortcut-default d
 nmap + zI
 nmap - zO
 nmap = zz
+
 
 # GUI color settings (Nord)
 set completion-css=             color:#d3d0c8;background-color:#2E3440;font:12pt DejaVu Sans Mono;
