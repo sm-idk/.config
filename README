@@ -2,3 +2,22 @@
   /,`.-'`'    -.  ;-;;,_ 
  |,4-  ) )-,_..;\ (  `'-'
 '---''(_/--'  `-'\_)     
+
+appmenu-gtk-module
+appmenu-registrar
+chromium
+herbstluftwm
+links
+mpv
+nix
+picom
+pipewire
+rofi
+seatd
+vala-panel-appmenu
+vimb
+vsv
+xorg
+xtools
+
+REMMEMBER TO REMOVE THE .git FOLDER FROM ~
