@@ -1,9 +1,11 @@
+
   |\      _,,,---,,_    
   /,`.-'`'    -.  ;-;;,_ 
  |,4-  ) )-,_..;\ (  `'-'
 '---''(_/--'  `-'\_)     
 
 appmenu-gtk-module
+appmenu-gtk3-module
 appmenu-registrar
 chromium
 herbstluftwm
