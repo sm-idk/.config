@@ -9,7 +9,6 @@
 pipewire &
 pipewire-pulse &
 picom &
-vala-panel &
 # setxkbmap pl
 # xrandr --output <Display name> -s 1920x1080
 exec dbus-launch --exit-with-session herbstluftwm

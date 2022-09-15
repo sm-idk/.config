@@ -4,16 +4,4 @@
  |,4-  ) )-,_..;\ (  `'-'
 '---''(_/--'  `-'\_)     
 
-appmenu-gtk-module
-appmenu-gtk3-module
-appmenu-registrar
-herbstluftwm
-picom
-pipewire
-rofi
-seatd
-vala-panel-appmenu
-vimb
-xorg
-
-REMMEMBER TO REMOVE THE .git FOLDER FROM ~
+sudo xbps-install -Suy appmenu-gtk-module appmenu-gtk3-module appmenu-registrar herbstluftwm picom pipewire rofi seatd vala-panel-appmenu vimb xorg
