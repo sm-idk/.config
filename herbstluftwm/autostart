@@ -16,7 +16,7 @@ Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-q spawn sysask
 hc keybind $Mod-Shift-c close_or_remove
-hc keybind $Mod-Return spawn xterm
+hc keybind $Mod-Return spawn st
 hc keybind $Mod-c spawn rofi -show drun
 
 # basic movement in tiling and floating mode
@@ -92,6 +92,16 @@ hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-i jumpto urgent
 
+# media keys
+hc keybind XF86AudioRaiseVolume spawn pamixer -i 5
+hc keybind XF86AudioLowerVolume spawn pamixer -d 5
+
+hc keybind Print spawn sh -c "maim -u | xclip -selection clipboard -t image/png"
+hc keybind Shift-Print spawn sh -c "maim -su | xclip -selection clipboard -t image/png"
+
+hc keybind $Mod-Control-r spawn giph --stop
+
+hc keybind $Mod-b chain , pad 0 0 , cycle_value settings.frame_gap 0 4 , spawn polybar-msg cmd toggle
 # }}}
 
 # rules {{{
@@ -162,9 +172,9 @@ dz_col &
 {
     pids=( )
     # reserve some space
-    hc pad 0 35
+    hc pad 0 24
     # launch polybar
-    vala-panel &
+    polybar bar -r &
     pids+=( $! )
     # wait until the panels should be stopped
     herbstclient -w '(quit_panel|reload)'
