@@ -10,7 +10,7 @@
   echo "Obvious disclamer, read this before running. Remmember to chmod."
 
 # 1. Install basic graphical components
-  sudo xbps-install -Suy xorg dbus seatd herbstluftwm picom pipewire vala-panel-appmenu appmenu-gtk-module appmenu-gtk3-module appmenu-registrar
+  sudo xbps-install -Suy xorg dbus seatd herbstluftwm picom pipewire vala-panel-appmenu appmenu-gtk3-module appmenu-registrar
   
 # 2. Make sure essential services are running
   echo "Remmember to enable dbus and seatd/elogind"
