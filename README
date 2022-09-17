@@ -1,7 +1,21 @@
+#!/bin/sh
+#     |\      _,,,---,,_    
+#     /,`.-'`'    -.  ;-;;,_ 
+#    |,4-  ) )-,_..;\ (  `'-'
+#   '---''(_/--'  `-'\_)     
+###################################
+# This README is the install script
+###################################
 
-  |\      _,,,---,,_    
-  /,`.-'`'    -.  ;-;;,_ 
- |,4-  ) )-,_..;\ (  `'-'
-'---''(_/--'  `-'\_)     
-
-sudo xbps-install -Suy appmenu-gtk-module appmenu-gtk3-module appmenu-registrar herbstluftwm picom pipewire rofi seatd vala-panel-appmenu vimb xorg
+# 1. Install basic graphical components
+  sudo xbps-install -Suy xorg dbus seatd herbstluftwm picom pipewire \
+  appmenu-gtk-module appmenu-gtk3-module appmenu-registrar vala-panel-appmenu
+  
+# 2. Make sure essential services are running
+  echo "Remmember to enable dbus and seatd/elogind"
+  echo "# sudo ln -s /etc/sv/<service> /var/service/"
+  echo "For easier service management, install `vsv`"
+  
+# 3. Install "nice to have" software (only if xtools installed)
+  [[ -f /bin/xi ]] && xi links-x11 xterm rofi mpv cmus vimb yt-dlp || \
+  echo "To install desktop software, install `xtools` and run again"
