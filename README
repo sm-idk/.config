@@ -19,8 +19,7 @@
   echo "For easier service management, install `vsv`"
   
 # 3. Install "nice to have" software (only if xtools installed)
-  [[ -f /bin/xi ]] && xi links-x11 xterm rofi mpv cmus vimb yt-dlp || \
-  echo "To install desktop software, install `xtools` and run again"
+  xi links-x11 xterm rofi mpv cmus vimb yt-dlp || echo "To install desktop software, install `xtools` and run again"
 # 4. Moving into place!
   echo "To make the rice functional, i recommend running the commands listed below"
   echo "cp .config/xinitrc ~/.xinitrc"
