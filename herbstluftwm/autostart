@@ -16,7 +16,7 @@ Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-q spawn sysask
 hc keybind $Mod-Shift-c close_or_remove
-hc keybind $Mod-Return spawn st
+hc keybind $Mod-Return spawn xterm
 hc keybind $Mod-c spawn rofi -show drun
 
 # basic movement in tiling and floating mode
@@ -172,9 +172,8 @@ dz_col &
 {
     pids=( )
     # reserve some space
-    hc pad 0 24
+    hc pad 0 35
     # launch polybar
-    polybar bar -r &
     pids+=( $! )
     # wait until the panels should be stopped
     herbstclient -w '(quit_panel|reload)'
