@@ -1,25 +1,24 @@
 #!/bin/sh
-#     |\      _,,,---,,_    
-#     /,`.-'`'    -.  ;-;;,_ 
-#    |,4-  ) )-,_..;\ (  `'-'
-#   '---''(_/--'  `-'\_)     
-###################################
-# This README is the install script
-###################################
+#        |\      _,,,---,,_    
+#        /,`.-'`'    -.  ;-;;,_ 
+#       |,4-  ) )-,_..;\ (  `'-'
+#      '---''(_/--'  `-'\_)     
+#########################################
+# This README can be the install script #
+#########################################
 
-  echo "Obvious disclamer, read this before running. Remmember to chmod."
+# Obvious disclamer, read this file before running it."
 
 # 1. Install basic graphical components
-  sudo xbps-install xorg dbus seatd herbstluftwm picom pipewire vala-panel-appmenu appmenu-gtk3-module appmenu-registrar >/dev/null
+  sudo xbps-install xorg dbus seatd herbstluftwm picom pipewire vala-panel-appmenu appmenu-gtk3-module appmenu-registrar
   
 # 2. Make sure essential services are running
-  echo "Remmember to enable dbus and seatd/elogind"
-  echo "# sudo ln -s /etc/sv/<service> /var/service/"
-  echo "For easier service management, install `vsv`"
+  # sudo ln -s /etc/sv/<service> /var/service/
   
 # 3. Install "nice to have" software (only if xtools installed)
-  xi links-x11 xterm rofi mpv cmus vimb yt-dlp >/dev/null || echo "To install desktop software, install `xtools` and run again"
+  xi links-x11 xterm rofi mpv cmus vimb yt-dlp
+
 # 4. Moving into place!
-  echo "To make the rice functional, i recommend running the commands listed below"
-  echo "cp .config/xinitrc ~/.xinitrc"
-  echo "chmod +x .config/herbstluftwm/autostart"
+  # To make the rice work, i recommend running the commands listed below
+  # echo "cp .config/xinitrc ~/.xinitrc"
+  # echo "chmod +x .config/herbstluftwm/autostart"
